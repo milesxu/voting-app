@@ -1,0 +1,14 @@
+.login-form {
+  max-width: 320px;
+  margin: auto;
+}
+.login-form-forgot {
+  float: right;
+}
+.login-form-button {
+  width: 100%;
+}
+.error {
+  display: inline-block;
+  color: rgb(240, 65, 52);
+}

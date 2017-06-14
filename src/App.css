@@ -1,0 +1,30 @@
+.App {
+  height: 100vh;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  color: rgb(97%, 97%, 97%);
+  float: left;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+.App-footer {
+  text-align: center;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

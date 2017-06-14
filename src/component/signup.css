@@ -1,0 +1,8 @@
+.sign-form {
+  width: 320px;
+  margin: auto;
+}
+.error {
+  display: inline-block;
+  color: rgb(240, 65, 52);
+}
