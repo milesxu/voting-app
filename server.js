@@ -42,4 +42,4 @@ const apiGet = require('./server/route/api-get');
 app.use('/api/get', apiGet);
 const apiUpdate = require('./server/route/api-update');
 app.use('/api/update', apiUpdate);
-app.listen(process.env.PROXY_PORT, () => console.log('App is running!'));
+app.listen(process.env.PORT, () => console.log('App is running!'));
