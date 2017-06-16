@@ -1,6 +1,10 @@
 {
   "name": "votingapp",
   "version": "0.1.0",
+  "engines": {
+    "node": "7.9.0",
+    "npm": "4.6.1"
+  },
   "private": true,
   "description": "FCC voting app project",
   "main": "server.js",
