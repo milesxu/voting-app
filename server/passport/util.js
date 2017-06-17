@@ -17,6 +17,7 @@ const getSign = (user, done) => {
 }
 
 const authByToken = (accessToken, refreshToken, profile, kind, done) => {
+  console.log(profile);
   User.findOne({
     //name: profile.displayName,
     //kind: kind,
