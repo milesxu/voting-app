@@ -8,5 +8,6 @@ module.exports = new FacebookStrategy({
   passReqToCallback: true,
   profileFields: ['emails'],
 }, (accessToken, refreshToken, profile, done) => {
+  console.log(accessToken);
   authByToken(accessToken, refreshToken, profile, 'facebook', done);
 });
