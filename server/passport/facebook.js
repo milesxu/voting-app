@@ -9,7 +9,7 @@ module.exports = new FacebookStrategy({
   profileFields: ['displayName', 'emails'],
   enableProof: true
 }, (accessToken, refreshToken, profile, done) => {
-  console.log(accessToken);
-  console.log(profile);
+  //console.log(accessToken);
+  //console.log(profile);
   authByToken(accessToken, refreshToken, profile, 'facebook', done);
 });
