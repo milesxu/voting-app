@@ -86,7 +86,8 @@ class App extends React.Component {
                   User={this.state.user} />} />
               <Route path="/mypoll" render={props => <MyPoll {...props}
                 User={this.state.user} />} />
-              <Route path="/addpoll" component={AddPoll} />
+              <Route path="/addpoll" render={props => <AddPoll {...props}
+                User={this.state.user} />} />
               <Route path="/detail/:title"
                 render={props => <PollDetail {...props}
                   User={this.state.user} />} />

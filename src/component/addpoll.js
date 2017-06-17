@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import { Breadcrumb, Form, Input, Button, Icon, message } from 'antd';
 import { Alert } from 'antd';
 import { formFetch } from '../util';
@@ -62,6 +62,8 @@ class AddPollForm extends React.Component {
     });
   };
   render() {
+    if (!this.state.User)
+      return <Redirect to='/' />;
     const { getFieldDecorator, getFieldValue } = this.props.form;
     getFieldDecorator('keys', { initialValue: [0, 1] });
     const keys = getFieldValue('keys');
