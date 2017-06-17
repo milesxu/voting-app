@@ -8,13 +8,13 @@ import './logintab.css';
 import facebook from './facebook3.svg';
 import github from './github.svg';
 import google from './google-plus3.svg';
-import linkedin from './linkedin.svg';
-import twitter from './twitter3.svg';
+//import linkedin from './linkedin.svg';
+//import twitter from './twitter3.svg';
 
 class LoginTab extends React.Component {
   constructor(props) {
     super(props);
-    this.social = ['Facebook', 'Github', 'Google', 'Linkedin', 'Twitter'];
+    this.social = ['Facebook', 'Github', 'Google'];
     this.winLoop = null;
     this.result = null;
     this.winRef = null;
@@ -30,18 +30,6 @@ class LoginTab extends React.Component {
 
       case "github":
         return {width: 1020, height: 618};
-
-      case "linkedin":
-        return {width: 527, height: 582};
-
-      case "twitter":
-        return {width: 495, height: 645};
-
-      case "live":
-        return {width: 500, height: 560};
-
-      case "yahoo":
-        return {width: 559, height: 519};
 
       default:
         return {width: 1020, height: 618};
@@ -71,7 +59,7 @@ class LoginTab extends React.Component {
   }
 
   handleClick(id) {
-    const address = ['facebook', 'github', 'google', 'linkedin', 'twitter'];
+    const address = ['facebook', 'github', 'google'];
     const url = '/auth/' + address[id];
     const name = `${this.social[id]} Login`;
     var settings = "scrollbars=no,toolbar=no,location=no,titlebar=no,directories=no,status=no,menubar=no";
@@ -81,7 +69,7 @@ class LoginTab extends React.Component {
   }
 
   render() {
-    const icons = [facebook, github, google, linkedin, twitter];
+    const icons = [facebook, github, google];
     const btns = this.social.map((item, id) => (
       <Button type="primary" key={this.social[id]}
         style={{ margin: '5px auto' }}

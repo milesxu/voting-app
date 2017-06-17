@@ -102,10 +102,10 @@ router.get('/facebook/callback', (req, res, next) => {
   callbackRedirect(req, res, 'facebook', next);
 });
 
-router.get('/twitter', passport.authenticate('twitter'));
+/*router.get('/twitter', passport.authenticate('twitter'));
 router.get('/twitter/callback', (req, res, next) => {
   callbackRedirect(req, res, 'twitter', next);
-});
+});*/
 
 router.get('/google', passport.authenticate('google', { scope: ['email'] }));
 router.get('/google/callback', (req, res, next) => {
