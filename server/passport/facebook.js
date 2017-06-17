@@ -6,7 +6,7 @@ module.exports = new FacebookStrategy({
   clientSecret: process.env.FACEBOOK_SECRET,
   callbackURL: process.env.FACEBOOK_CALLBACK,
   //passReqToCallback: true,
-  profileFields: ['email'],
+  profileFields: ['emails'],
   enableProof: true
 }, (accessToken, refreshToken, profile, done) => {
   console.log(accessToken);
