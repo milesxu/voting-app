@@ -41,6 +41,7 @@ const authByToken = (accessToken, refreshToken, profile, kind, done) => {
 
 const callbackRedirect = (req, res, kind, next) => {
   passport.authenticate(kind, (err, token, data) => {
+    console.log(err);
     let url = '/auth/social/';
     if (err) {
       url += `fail?err=${encodeURIComponent(err.toString())}`;
