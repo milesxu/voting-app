@@ -62,8 +62,6 @@ class AddPollForm extends React.Component {
     });
   };
   render() {
-    if (!this.props.User)
-      return <Redirect to='/' />;
     const { getFieldDecorator, getFieldValue } = this.props.form;
     getFieldDecorator('keys', { initialValue: [0, 1] });
     const keys = getFieldValue('keys');
@@ -122,6 +120,8 @@ const NewPoll = Form.create()(AddPollForm);
 
 class AddPoll extends React.Component {
   render() {
+    if (!this.props.User)
+      return <Redirect to='/' />;
     return (
       <MainContainer>
         <Breadcrumb>
